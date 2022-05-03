@@ -1,0 +1,26 @@
+.sloganLogo {
+    width: 50%;
+    margin: auto;
+}
+
+.font {
+    color: #d16286;
+    margin-top: -5px;
+}
+
+h1, h2 {
+    vertical-align: middle;
+}
+
+.text {
+    padding: 5%;
+    margin-top: 3%;
+}
+
+a {
+    color: #d16286;
+}
+
+a:hover {
+    color: black;
+}

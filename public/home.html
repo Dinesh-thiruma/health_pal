@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | HealthPal</title>
+    <link rel="shortcut icon" href="assets/Logo.png" />
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.8.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.8.1/firebase-auth.js"></script>
+    <script defer src="https://kit.fontawesome.com/d4dbed8638.js" crossorigin="anonymous"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <script defer src="js/home.js"></script>
+  </head>
+  <body>
+
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item">
+            <img class="image" src="assets/Logo.png"><br>
+            <p class="title is-5">&nbspHealthPal</p>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+            <a class="navbar-item" href="food.html">
+                Food
+            </a>
+
+            <a class="navbar-item" href="#exerciseDiv">
+                Exercise
+            </a>
+
+            <a class="navbar-item" href="aboutUs.html">
+                About Us
+            </a>
+
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item has-dropdown is-hoverable" style="margin-right: 10%;">
+                <a class="navbar-link">
+                    <p class="heading" style="margin-top:6px;">
+                        Signed in as&nbsp&nbsp
+                    </p>
+                    <img id="profileNav" src="" class="image is-24x24"/>
+                    <p id="nameNav" class="subtitle is-5" id="">
+                        <strong></strong>
+                    </p>
+                </a>
+
+                <div class="navbar-dropdown">
+                <a class="navbar-item">
+                    Settings
+                </a>
+                <a class="navbar-item">
+                    My Account
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item has-text-danger" href="index.html">
+                    Sign Out
+                </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+      <section><br><br><br>
+          <img id="profilePic" style="width: 20%; margin: auto;"class="image" src=""/>
+          <br><h2 class="has-text-centered heading is-5">
+              Welcome back,
+          </h2>
+          <h1 class="has-text-centered title is-3" id="welcomeText">
+              
+          </h1>
+          <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                <p class="heading">Calories</p>
+                <p class="title" id="calorieCount">0 cals</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                <p class="heading">Miles</p>
+                <p class="title" id="milesCount">0 miles</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                <p class="heading">Time</p>
+                <p class="title" id="timeCount">0 min</p>
+                </div>
+            </div>
+        </nav>
+      </section>
+      <hr>
+      <section><br>
+          <h1 class="title is-3 has-text-centered">
+              Food Tracker
+          </h1>
+          <h2 class="heading has-text-centered" style="margin-top:-15px;">
+            A Powerful Tool to Control your Caloric Intake!
+          </h2><br>
+          <h2 class="heading is-4" style="margin-left: 5%" id="food-log-title">
+              Food Log:<br><br>
+          </h2>
+          
+          <div class="has-text-centered" id='noFoodDiv'>
+            <img src="assets/Chef.svg" width="25%"/>
+            <h3 class="heading is-5"><br>
+                <br><br>You haven't logged any foods yet. <b>Click below to log one!</b><br><br>
+            </h3>
+          </div>
+
+          <div class="has-text-centered">
+                <a class="button is-success is-outlined" href="food.html">
+                    Log A New Food
+                </a>
+            </div>
+      </section><br><hr>
+
+      <section><br>
+          <h2 class="title is-3 has-text-centered">
+              Diet Creator
+          </h2>
+          <h2 class="heading has-text-centered" style="margin-top: -15px;">
+              Craft the perfect diet for your nutritional needs!
+          </h2><br>
+          <div class="has-text-centered">
+            <img src="assets/construction.svg" width="35%">
+            <h3 class="heading is-5"><br><br>
+                This feature is still under construction. <b>Check back later!</b><br><br>
+            </h3>
+            </div>
+      </section>
+      <hr>
+
+      <section><br>
+          <h1 class="title is-3 has-text-centered">
+              Exercise Tracker
+          </h1>
+          <h2 class="heading has-text-centered" style="margin-top: -15px;">
+              Log and track your daily exercises!
+          </h2>
+          <h2 class="heading is-3" style="margin-left: 5%">
+              Exercise Log:
+        </h2>
+        <br>
+          <div id="cardColumns" class="columns" style="padding-left: 5%; padding-right: 5%; padding-bottom: 1%; overflow-x: auto">
+          </div>
+          <div class="has-text-centered" id='noExerciseDiv'><br>
+            <img src="assets/Bike.svg" width="30%"/>
+            <h3 class="heading is-5"><br><br>
+                You haven't logged any exercises yet. <b>Click below to log one!</b>
+            </h3>
+          </div>
+        <br>
+      </section>
+
+    <div id="logDiv" class="has-text-centered">
+        <button id="logExerciseButton" class="button is-success is-outlined" onclick="logExercise()">
+            Log A New Exercise
+        </button>
+    </div>
+
+    <div id="confirmLogDiv" class="has-text-centered" style="display:none;">
+        <h1 class="heading">
+            Log A New Exercise <br>
+        </h1>
+        <div class="control has-icons-left">
+            <div class="select">
+                <select id="exerciseSelect" onchange="changeIcon();">
+                <option selected>Run</option>
+                <option>Walk</option>
+                <option>Swim</option>
+                <option>Bike</option>
+                <option>Gym</option>
+                </select>
+            </div>
+            <span class="icon is-medium is-center has-text-dark" style="margin-left: -120px;">
+                <i id="exerciseIcon" class="fas fa-running"></i>
+            </span>
+        </div><br>
+        <h1 class="heading">
+            Distance/Duration <br>
+        </h1>
+        <div class="columns is-centered">
+            <div class="column is-1 has-text-centered">
+                <input id="durationInput" class="input is-info is-small" type="text" placeholder="miles/min"/>
+            </div>
+        </div>
+        <button id="logExerciseButton" class="button is-danger is-outlined" onclick="cancelLog()">
+            Cancel
+        </button> &nbsp&nbsp&nbsp
+        <button id="logExerciseButton" class="button is-success is-outlined" onclick="confirmLog()">
+            Log
+        </button>
+    </div><br><hr>
+
+      <section><br>
+          <h2 class="title is-3 has-text-centered">
+              Workout Planner
+          </h2>
+          <h2 class="heading has-text-centered" style="margin-top: -15px;">
+              Create and store custom workouts!
+          </h2>
+          <h2 class="heading is-3" style="margin-left: 5%">
+              Your Workouts:
+        </h2>
+        <br>
+        <div class="has-text-centered">
+            <div id="workoutCardColumns" class="columns" style="padding-left: 5%; padding-right: 5%; padding-bottom: 1%; overflow-x: auto">
+                <div class="column is-3" id="plansCard">
+
+                </div>
+            </div>  
+            <div class="has-text-centered" id='noWorkoutDiv'>
+                <img src="assets/PersonalTrainer.svg" width="35%"/>
+                <h3 class="heading is-5"><br>
+                    You haven't made any workouts yet. <b>Click below to create one!</b><br><br>
+                </h3>
+            </div>
+            <div id="workoutDiv" class="has-text-centered">
+                <a class="button is-success is-outlined" onclick="createWorkout()">
+                    Create A Workout
+                </a>
+            </div>
+        </div>
+
+    <div id="confirmWorkoutDiv" class="has-text-centered" style="display:none;">
+        <h1 class="heading">
+            Name your Workout <br>
+        </h1>
+        <div class="columns is-centered">
+            <div class="column is-2 has-text-centered">
+                <input id="workoutNameInput" autocomplete="off" class="input is-info is-small" type="text" placeholder="Workout Name"/>
+            </div>
+        </div>
+        <h1 class="heading" id="exerciseNum">
+            Exercise #1 <br>
+        </h1>
+        <div class="control has-icons-left">
+            <div class="select">
+                <select id="workoutSelect" onchange="changeWorkoutIcon();">
+                <option selected>Push-ups</option>
+                <option>Pull-ups</option>
+                <option>Sit-ups</option>
+                <option>Bench Press</option>
+                <option>Custom</option>
+                </select>
+            </div>
+            <span class="icon is-medium is-center has-text-dark" style="margin-left: -170px;">
+                <img id="workoutIcon" class="image is-24x24" src="https://static.thenounproject.com/png/660576-200.png"/>
+            </span>
+        </div><br>
+
+        <div class="columns is-centered" id="workoutNameDiv" style="display: none;">
+            <div class="column is-2 has-text-centered">
+                <h1 class="heading">
+                    Custom Exercise Name <br>
+                </h1>
+                <input autocomplete="off" id="exerciseNameInput" class="input is-info is-small" type="text" placeholder="Exercise Name"/>
+            </div>
+        </div>
+        
+        <h1 class="heading">
+            Repetitions <br>
+        </h1>
+        <div class="columns is-centered">
+            <div class="column is-1 has-text-centered">
+                <input autocomplete="off" id="repsInput" class="input is-info is-small" type="text" placeholder="reps"/>
+            </div>
+        </div>
+        <button class="button is-danger is-outlined" onclick="cancelCreate()">
+            Cancel
+        </button> &nbsp&nbsp&nbsp
+        <button class="button is-info is-outlined" onclick="addExercise()">
+            Add Exercise
+        </button> &nbsp&nbsp&nbsp
+        <button class="button is-success is-outlined" onclick="confirmCreate()">
+            Create
+        </button>
+    </div>
+
+      </section><br><br><br>
+
+
+      <footer class="footer" style="background-color: #d16286; color: white;">
+            <div class="content has-text-centered">
+                <p>
+                <b>HealthPal</b> by Satvik Muddana, Dinesh Thirumavalavan, and Mark Deng.
+                <br><br>
+                <a class="button is-info" href="aboutUs.html">Meet the team</a>
+                </p>
+            </div>
+        </footer>
+  </body>
+</html>

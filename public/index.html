@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health Pal</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.8.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.8.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="assets/Logo.png" />
+    
+    <script src="https://kit.fontawesome.com/d4dbed8638.js" crossorigin="anonymous"></script>
+
+    <!-- JS File -->
+    <script defer src="js/script.js"></script>
+    </head>
+    <body>
+        <!-- LOGO -->
+        <section>
+            <img class="image sloganLogo" src="assets/SloganLogo.png" alt="HealthPal"/>
+            <h2 class="font subtitle is-size-4-widescreen has-text-centered">
+                A fitness coach, dietician, and calorie tracker all in one!<br>
+                Ready to get started?
+            </h2>
+            <p class="has-text-centered">
+                <a class="button is-medium is-danger is-outlined" onclick="signInWithGoogle()">
+                    <span class="icon">
+                        <img class="image is-24x24" src="assets/google-logo.png"/>
+                    </span>
+                    <span>Sign In With Google</span>
+                </a>
+            </p>
+            <br>
+        </section>
+
+        <!-- EXERCISE -->
+        <hr>
+        <section>
+            <div class="columns">
+                <div class="column is one-third is-centered">
+                    <img class="image" width="80%" src="assets/PersonalTrainer.svg" style="margin-left: 15%; margin-top: 70px;"/>
+                </div>
+                <div class="column is one-third text">
+                    <h1 class="font title is-size-2-widescreen is-spaced ">
+                        Never work out alone again
+                    </h1>
+                    <h2 class="subtitle is-size-4-widescreen">
+                        With HealthPal, design and save custom workout based on your specific goals, 
+                        whether that be bulking, cutting, or anything in between!<br>
+                    </h2>
+                    <h2 class="subtitle is-size-4-widescreen">
+                        <span class="font"><b>Don't know where to start?</b></span>
+                        Check out HealthPal's 
+                        <a onclick="signInWithGoogle()">
+                            simple quiz.
+                        </a>
+                    </h2>
+                    <br><br>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOD TRACKER -->
+        <hr>
+        <section>
+            <div class="columns">
+                <div class="column is one-third text" style="text-align: right;">
+                    <h1 class="font title is-size-2-widescreen is-spaced ">
+                        Your Personal Nutritionist
+                    </h1>
+                    <h2 class="subtitle is-size-4-widescreen">
+                        Log your daily meals, and HealthPal analyzes their caloric value, 
+                        nutritional facts, and so much more!<br>
+                    </h2>
+                    <h2 class="subtitle is-size-4-widescreen">
+                        <span class="font"><b>Interested?</b></span>
+                        Head on over to HealthPal's 
+                        <a onclick="signInWithGoogle()">
+                            food tracker.
+                        </a>
+                    </h2>
+                    
+                </div>
+                <div class="column is one-third is-centered">
+                    <img class="image" width="60%" src="assets/ShoppingCart.svg" style="margin-left: 25%; margin-top: 60px;"/>
+                </div>
+            </div>
+        </section>
+        <br><br>
+
+        <!-- CHEF -->
+        <hr>
+        <section>
+            <div class="columns">
+                <div class="column is one-third is-centered">
+                    <img class="image" width="60%" src="assets/Chef.svg" style="margin-left: 25%; margin-top: 20px;"/>
+                </div>
+                <div class="column is one-third text">
+                    <h1 class="font title is-size-2-widescreen is-spaced ">
+                        Diet the right way
+                    </h1>
+                    <h2 class="subtitle is-size-4-widescreen">
+                        Designing a diet is easy with HealthPal. Explore popular diets, 
+                        or create your own, tailored to your specific needs and goals.<br>
+                    </h2>
+                    <h2 class="subtitle is-size-4-widescreen">
+                        <span class="font"><b>Are you ready?</b></span>
+                        Check out HealthPal's 
+                        <a onclick="signInWithGoogle()">
+                            custom diet creator.
+                        </a>
+                    </h2>
+                    
+                </div>
+            </div>
+        </section>
+        <br><br><br><br>
+
+        <section class="hero has-text-centered is-danger">
+            <div class="hero-body">
+                <p class="title is-size-2-widescreen">
+                    Convinced yet?
+                </p>
+                <p class="subtitle is-size-4-widescreen">
+                    Sign in now, and add HealthPal to your daily schedule.
+                </p>
+            </div>
+            <p class="has-text-centered">
+                <a class="button is-medium is-info" onclick="signInWithGoogle()">
+                    <span class="icon">
+                        <img class="image is-24x24" src="assets/google-logo.png"/>
+                    </span>
+                    <span>Sign In With Google</span>
+                </a>
+            </p>
+            <br><br>
+        </section>
+  </body>
+</html>

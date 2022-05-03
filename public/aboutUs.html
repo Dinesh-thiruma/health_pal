@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Team</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.8.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.8.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-performance.js"></script>
+    <script defer src="js/aboutUs.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="shortcut icon" href="assets/Logo.png" />
+    
+    <script src="https://kit.fontawesome.com/d4dbed8638.js" crossorigin="anonymous"></script>
+    </head>
+    <body><br>
+        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="home.html">
+            <img class="image" src="assets/Logo.png"><br>
+            <p class="title is-5">&nbspHealthPal</p>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+            <a class="navbar-item" href="food.html">
+                Food
+            </a>
+
+            <a class="navbar-item" href="home.html">
+                Exercise
+            </a>
+
+            <a class="navbar-item is-tab is-active">
+                About Us
+            </a>
+
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item has-dropdown is-hoverable" style="margin-right: 10%;">
+                <a class="navbar-link">
+                    <p class="heading" style="margin-top:6px;">
+                        Signed in as&nbsp&nbsp
+                    </p>
+                    <img id="profileNav" src="" class="image is-24x24"/>
+                    <p id="nameNav" class="subtitle is-5" id="">
+                        <strong></strong>
+                    </p>
+                </a>
+
+                <div class="navbar-dropdown">
+                <a class="navbar-item">
+                    Settings
+                </a>
+                <a class="navbar-item">
+                    My Account
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item has-text-danger" href="index.html">
+                    Sign Out
+                </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <br><br>
+        <div class="has-text-centered">
+            <a href="index.html">
+                <img width="4%" src="assets/Logo.png">
+                <p class="title is-5 has-text-centered">
+                    &nbspHealthPal
+                </p>
+            </a><br>
+            <h1 class="title is-1">
+                Meet The Cubstart Guys
+            </h1><br>
+        </div>
+        <div class="columns is-centered is-8">
+            <div class="column is-one-quarter">
+                <div class="card" style="margin-left: -20%; margin-right: 20%;"><br>
+                    <img style="width: 55%; margin: auto;"class="image" src="https://www.pngarts.com/files/3/Avatar-PNG-Download-Image.png" alt="Profile Picture"/>
+                    <h1 class="title is-4 has-text-centered">
+                        <br>Satvik Muddana
+                    </h1>
+                    <h2 class="subtitle is-6 has-text-centered" style="margin-top: -10px; padding-left: 7%; padding-right: 7%;">
+                        🎓 <b>University of California, Berkeley</b></h2>
+                        <p class="subtitle is-6 has-text-centered" style="margin-top: -20px; padding-left: 7%; padding-right: 7%;">B.A. in Computer Science</p>
+                        <h2 class="subtitle is-6 has-text-centered" style="padding-left: 7%; padding-right: 7%; padding-bottom: 7%;">
+                        <hr>Hello! I am a student in the Computer Science field. I love learning new 
+                        technologies such as Machine Learning and Full Stack Development to expand 
+                        my horizons on what's out there. I am looking for opportunities to gain more 
+                        knowledge and experience in these fields. Have fun with this app!
+                    </h2>
+                </div>
+            </div>
+            <div class="column is-one-quarter">
+                <div class="card"><br>
+                    <img style="width: 55%; margin: auto;"class="image" src="https://www.pngarts.com/files/3/Avatar-PNG-Download-Image.png" alt="Profile Picture"/>
+                    <h1 class="title is-4 has-text-centered">
+                        <br>Dinesh Thirumavalavan
+                    </h1>
+                    <h2 class="subtitle is-6 has-text-centered" style="margin-top: -10px; padding-left: 7%; padding-right: 7%;">
+                        🎓 <b>University of California, Berkeley</b></h2>
+                        <p class="subtitle is-6 has-text-centered" style="margin-top: -20px; padding-left: 7%; padding-right: 7%;">B.S. in Electrical Engineering and Computer Science</p>
+                        <h2 class="subtitle is-6 has-text-centered" style="padding-left: 7%; padding-right: 7%; padding-bottom: 7%;">
+                        <hr>Hi! My name is Dinesh, and I'm a passionate computer science student interested
+                        in gaining experience in all the vast fields of CS. I love web & mobile development, and 
+                        want to gain more experience in exciting fields like AI and machine learning. I'm also an avoid
+                        hiker/nature enthusiast!
+                    </h2>
+                </div>
+            </div>
+            <div class="column is-one-quarter">
+                <div class="card" style="margin-left: 20%; margin-right: -20%;"><br>
+                    <img style="width: 55%; margin: auto;"class="image" src="https://www.pngarts.com/files/3/Avatar-PNG-Download-Image.png" alt="Profile Picture"/>
+                    <h1 class="title is-4 has-text-centered">
+                        <br>Mark Deng
+                    </h1>
+                    <h2 class="subtitle is-6 has-text-centered" style="margin-top: -10px; padding-left: 7%; padding-right: 7%;">
+                        🎓 <b>University of California, Berkeley</b></h2>
+                        <p class="subtitle is-6 has-text-centered" style="margin-top: -20px; padding-left: 7%; padding-right: 7%;">B.A. in Computer Science</p>
+                        <h2 class="subtitle is-6 has-text-centered" style="padding-left: 7%; padding-right: 7%; padding-bottom: 7%;">
+                        <hr>Mark is a student software developer who has an interest in multiple different disciplines including 
+                        biotechnology and finance. Outside of academics, Mark enjoys going on nature
+                         hikes, playing the piano, and playing/watching basketball. 
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+    </body>
+</html>

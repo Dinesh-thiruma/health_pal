@@ -1,0 +1,15 @@
+.tile {
+    text-align: center;
+    
+}
+.box {
+    text-align: center;
+}
+.title {
+    margin: auto;
+}
+.content {
+    margin: auto;
+    white-space: nowrap;
+    overflow: hidden;
+}

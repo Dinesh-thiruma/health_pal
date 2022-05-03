@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "health-pal-6b469",
+    "staging": "health-pal-6b469",
+    "healthpal": "health-pal-6b469",
+    "firebase": "health-pal-6b469"
+  },
+  "targets": {}
+}
